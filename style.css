@@ -1,0 +1,177 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+        /* 3. Global Styles */
+        body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: auto;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: auto;
+    padding: 2rem;
+    top: auto;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+        }
+
+        /* 4. Toggle Switch Container */
+        .theme-switch-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .theme-switch {
+            display: inline-block;
+            height: 34px;
+            position: relative;
+            width: 60px;
+        }
+
+        .theme-switch input {
+            display: none;
+        }
+
+        /* 5. The Slider Track */
+        .slider {
+            background-color: var(--toggle-bg);
+            bottom: 0;
+            cursor: pointer;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transition: .4s;
+            border-radius: 34px;
+            border: 2px solid var(--border-color);
+        }
+
+        /* 6. The Moving Knob */
+        .slider:before {
+            background-color: var(--toggle-btn);
+            bottom: 4px;
+            content: "";
+            height: 22px;
+            left: 4px;
+            position: absolute;
+            transition: .4s;
+            width: 22px;
+            border-radius: 50%;
+        }
+
+        /* 7. Slider Movement States */
+        input:checked + .slider {
+            background-color: var(--toggle-bg);
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(26px);
+            background-color: var(--toggle-btn);
+        }
+
+body {
+  background-color: gray;
+}
+h1{ text-align: center;
+font-size: 50px;
+
+}
+h3{ 
+font-size: 70px;
+
+}
+body {
+   background-image: url("grey.jpeg");
+background-size: 2000px;
+
+
+}
+ul {font-size: 36px;}
+#title {
+  font-family: "Courier New", Courier, monospace;
+	background-image: url("images/hero.jpg");
+		background-repeat: no-repeat;
+	background-position: center;
+	height: 290px
+}
+        #title-box {
+       margin-top: auto;
+            max-width: 400px;
+            margin:auto;
+            text-align: center;
+    
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+#nav {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+	        text-align: center;
+            margin-bottom: 20px;
+            font-weight: bold;
+      
+}
+
+#content {
+    font-family: Papyrus, "Palatino Linotype", fantasy;
+    max-width: 1800px;
+    margin: 0 auto;
+    font-size: 18px;
+}
+
+        #content img {
+            max-width: 100%;
+            height: auto;
+            
+            margin: 15px 0;
+        }
+
+#footer {
+  font-family: Luminari, "Apple Chancery", fantasy;
+	     text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+	font-size: 50px;
+}.onethirdcolumn {
+    font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+    color: #EFE8E2;
+    background-color: #3F3027;
+	margin: 5px;
+	padding: 5px;
+	float: left;
+	width: 32.3%;
+	height: 30%;
+	
+  border-radius: 20px; /* Adjust the number of pixels to change the roundness */
+
+}
+a:link {
+  color: #7B5C4B; /* Raw Umber (Rich Brown) */
+}
+
+/* visited link */
+a:visited {
+  color: #3F3027; /* Old Burgundy (Darker, subtle brown) */
+}
+
+/* mouse over link */
+a:hover {
+  color: #171411; /* Eerie Black (Deep accent pop) */
+  text-decoration: underline;
+}
+
+/* selected link */
+a:active {
+  color: #C0AB9A; /* Tuscany (Muted transition tone) */
+}
