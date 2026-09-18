@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greysens Amazing Web Part Two - Gators Toggle</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* ========================================== 
+           DARK MODE TO GATORS THEME TOGGLE 🐊 
+        ========================================== */
+        /* 1. Default Dark Mode Theme */
+       :root {
+            --bg-primary: #EFE8E2; /* Platinum (Light Background) */
+            --text-primary: #3F3027; /* Old Burgundy (Dark Readable Text) */
+            --toggle-bg: #C0AB9A; /* Tuscany track */
+            --toggle-btn: #7B5C4B; /* Raw Umber knob */
+            --border-color: #C0AB9A;
+            --box-bg: #F7F5F2; /* Pearl for background cards/boxes */
+            --box-text: #171411; /* Eerie Black for text inside boxes */
+        }
+        /* 2. Florida Gators Active Theme */
+        [data-theme="gators"] {
+            --bg-primary: #0021A5; /* Albert Blue */
+            --text-primary: #FA4616; /* Orange Accent */
+            --toggle-bg: #FA4616; /* Orange Toggle Track */
+            --toggle-btn: #FFFFFF; /* White Toggle Button */
+            --border-color: #FA4616;
+            --box-bg: #FA4616;
+            --box-text: #FFFFFF;
+        }
+
+        /* 3. Global Styles */
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: Arial, sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            margin: 0;
+            padding: 2rem;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+        }
+
+        /* 4. Toggle Switch Container */
+        .theme-switch-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .theme-switch {
+            display: inline-block;
+            height: 34px;
+            position: relative;
+            width: 60px;
+        }
+
+        .theme-switch input {
+            display: none;
+        }
+
+        /* 5. The Slider Track */
+        .slider {
+            background-color: var(--toggle-bg);
+            bottom: 0;
+            cursor: pointer;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transition: .4s;
+            border-radius: 34px;
+            border: 2px solid var(--border-color);
+        }
+
+        /* 6. The Moving Knob */
+        .slider:before {
+            background-color: var(--toggle-btn);
+            bottom: 4px;
+            content: "";
+            height: 22px;
+            left: 4px;
+            position: absolute;
+            transition: .4s;
+            width: 22px;
+            border-radius: 50%;
+        }
+
+        /* 7. Slider Movement States */
+        input:checked + .slider {
+            background-color: var(--toggle-bg);
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(26px);
+            background-color: var(--toggle-btn);
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- The Theme Toggle Switch -->
+        <div class="theme-switch-wrapper">
+            <span>Go Gators?</span>
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider"></div>
+            </label>
+        </div>
+
+        <!-- Sample Page Content -->
+        <h1>Welcome to the Swamp</h1>
+        <p>Flip the switch above to activate Florida Gators mode or stick to standard dark mode.</p>
+    </div>
+
+    <div id="title">
+        <div id="title-box">
+            <h1>A little&nbsp; &nbsp;about&nbsp; me&nbsp; &nbsp; &nbsp;&nbsp;</h1>
+        </div>
+    </div>
+
+    <div id="nav">
+	<a href="index.html" herf="index.html">Home</a> - <a href="Favorites.html">Favorites</a> - <a href="contact.html">Contact</a></div>
+    <div class="onethirdcolumn">
+      <h2>About me&nbsp;</h2>
+      <p>I'm a creative designer that loves Pokemon and logos in industrial Design&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+      <h4></h4></p>
+      <p>click more to see&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+</div>
+<div class="onethirdcolumn">
+  <h2>&nbsp;My Favorite Website</h2>
+  <p>I love looking for inspo so i always check stussy because the way they produce product and show logos are always so intresting&nbsp;</p>
+<p>click here to check out the stussy site. <a href="https://stussy.com" style="color: #EFE8E2;">Stussy.com</a> &nbsp; &nbsp; &nbsp;</p>
+</div>
+<div class="onethirdcolumn">
+  <h2>Contact Me&nbsp;</h2>
+  <p>If you ever have any questions click here aswell as any jobs wanted.&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+
+    <div id="content">
+	  <p style="font-size: 1.5rem;"><br>
+      </p>
+	  <p style="font-size: 1.5rem;"><br>
+      </p>
+	  <p style="font-size: 1.5rem;"><br>
+      </p>
+	  <p style="font-size: 1.5rem;"><br>
+      </p>
+	  <p style="font-size: 1.5rem;"> Hi there! Meet Greysen Fondots, an Oceanside based creative powerhouse and goes to El Camino high school who is quickly becoming well-known and loved in the community for delivering awesome, high-quality work. Specializing in web design, graphic design, and film, I like to blend boundless imagination with technical skill to craft custom marketing materials, striking advertisements, professional logo creation, and captivating photography. Known for being highly collaborative and well-liked, Greysen brings your unique vision to life with unique, tailor-made solutions that are highly effective yet inexpensive. Whether you need to revamp your digital presence or launch a fresh visual campaign, Greysen is the go-to professional to elevate your brand without breaking the bank.</p>
+    </div>
+      
+<div style="clear: both;"></div>
+
+    <div id="footer">
+      <p>&nbsp;</p>
+      <p> Copyright &copy; 2026 Greysens Grub </p>
+    </div>
+
+    <!-- JavaScript to handle the toggle state -->
+    <script>
+        const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+        toggleSwitch.addEventListener('change', (e) => {
+            if (e.target.checked) {
+                document.documentElement.setAttribute('data-theme', 'gators');
+            } else {
+                document.documentElement.removeAttribute('data-theme');
+            }
+        });
+    </script>
+</body>
+</html>

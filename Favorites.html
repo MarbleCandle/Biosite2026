@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greysens Amazing Web Part Two - Gators Toggle</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      /*
+           DARK MODE TO GATORS THEME TOGGLE 🐊 
+        ========================================== */
+        /* 1. Default Theme (Updated to a soft light background from your palette) */
+        :root {
+            --bg-primary: #EFE8E2; /* Platinum (Light Background) */
+            --text-primary: #3F3027; /* Old Burgundy (Dark Readable Text) */
+            --toggle-bg: #C0AB9A; /* Tuscany track */
+            --toggle-btn: #7B5C4B; /* Raw Umber knob */
+            --border-color: #C0AB9A;
+            --box-bg: #F7F5F2; /* Pearl for background cards/boxes */
+            --box-text: #171411; /* Eerie Black for text inside boxes */
+        }
+        /* 2. Florida Gators Active Theme */
+        [data-theme="gators"] {
+            --bg-primary: #0021A5; /* Albert Blue */
+            --text-primary: #FA4616; /* Orange Accent */
+            --toggle-bg: #FA4616; /* Orange Toggle Track */
+            --toggle-btn: #FFFFFF; /* White Toggle Button */
+            --border-color: #FA4616;
+            --box-bg: #FA4616;
+            --box-text: #FFFFFF;
+        }
+
+        /* 3. Global Styles */
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: Arial, sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            margin: 0;
+            padding: 2rem;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+        }
+
+        /* 4. Toggle Switch Container */
+        .theme-switch-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .theme-switch {
+            display: inline-block;
+            height: 34px;
+            position: relative;
+            width: 60px;
+        }
+
+        .theme-switch input {
+            display: none;
+        }
+
+        /* 5. The Slider Track */
+        .slider {
+            background-color: var(--toggle-bg);
+            bottom: 0;
+            cursor: pointer;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transition: .4s;
+            border-radius: 34px;
+            border: 2px solid var(--border-color);
+        }
+
+        /* 6. The Moving Knob */
+        .slider:before {
+            background-color: var(--toggle-btn);
+            bottom: 4px;
+            content: "";
+            height: 22px;
+            left: 4px;
+            position: absolute;
+            transition: .4s;
+            width: 22px;
+            border-radius: 50%;
+        }
+
+        /* 7. Slider Movement States */
+        input:checked + .slider {
+            background-color: var(--toggle-bg);
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(26px);
+            background-color: var(--toggle-btn);
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- The Theme Toggle Switch -->
+        <div class="theme-switch-wrapper">
+            <span>Go Gators?</span>
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider"></div>
+            </label>
+        </div>
+
+        <!-- Sample Page Content -->
+        <h1>Welcome to the Swamp</h1>
+        <p>Flip the switch above to activate Florida Gators mode or stick to standard dark mode.</p>
+    </div>
+
+    <div id="title">
+        <div id="title-box">
+            <h1>Favorites things and hobbies</h1>
+        </div>
+    </div>
+
+    <div id="nav">
+	<a href="index.html" herf="index.html">Home</a> - <a href="Favorites.html">Favorites</a> - <a href="contact.html">Contact</a></div>
+
+    <div id="content">
+        <p style="font-size: 1.5rem;">Here are images of my two favorite Pokemon! Both are reptilian and crocodile-related. The dino one is called Tyrantrum and is a prehistoric Pokémon. The other one is named Totodile (the blue one); it is a starter for Gen 2 and has two more evolutions after this one. I collect cards all the time and try to just get ones that look amazing. It doesn't matter to me how popular they are, but more the art and story behind the cards themselves. It just brings me so much joy.</p>
+        
+         <img src="images/totodile.jpg" alt="Totodile" width="590">
+        <img src="images/rex.jpeg" alt="Tyrantrum" width="700">
+
+      <p style="font-size: 1.5rem;">I am also a fan of trucks and cars. I have a Ford F-150 from the year 2000 and it has <u>300,000</u> miles on it, but recently it has been making some funny noises. I recently started to look at other cars too, but I am certain I will find one that is fit for me.</p>
+        
+        <img src="images/f150.jpeg" alt="Ford F-150 Truck" width="700">
+
+        <h2>Some cars I have thought about are:</h2>
+        <ul style="list-style-type: square;">
+            <li>Corvette C5</li>
+            <li>Subaru WRX (2000)</li>
+            <li>Silverado (1995)</li>
+        </ul>
+
+        <h3>This is me when I went to an A$AP Rocky concert</h3>
+        <p>I started to go to a lot of concerts. It is so awesome to see those artists live and hang with friends getting these experiences. I also love getting to take inspiration from the sets and lighting to use in future projects, perhaps.</p>
+      <!-- Replace 'Asap.jpeg' with a working URL if hosting online -->
+        <img src="images/Asap.jpeg" alt="Greysen out and about at the concert" width="300" style="float: left; margin-right: 15px; margin-bottom: 15px;">
+    </div>
+
+    <div style="clear: both;"></div>
+    <div id="footer">
+      <p>&nbsp;</p>
+      <p> Copyright &copy; 2026 Greysens Grub </p>
+    </div>
+
+
+    <!-- JavaScript to handle the toggle state -->
+    <script>
+        const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+        toggleSwitch.addEventListener('change', (e) => {
+            if (e.target.checked) {
+                document.documentElement.setAttribute('data-theme', 'gators');
+            } else {
+                document.documentElement.removeAttribute('data-theme');
+            }
+        });
+    </script>
+</body>
+</html>
