@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greysens Amazing Web Part Two - Gators Toggle</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      /*
+           DARK MODE TO GATORS THEME TOGGLE 🐊 
+        ========================================== */
+        /* 1. Default Theme (Updated to a soft light background from your palette) */
+        :root {
+            --bg-primary: #EFE8E2; /* Platinum (Light Background) */
+            --text-primary: #3F3027; /* Old Burgundy (Dark Readable Text) */
+            --toggle-bg: #C0AB9A; /* Tuscany track */
+            --toggle-btn: #7B5C4B; /* Raw Umber knob */
+            --border-color: #C0AB9A;
+            --box-bg: #F7F5F2; /* Pearl for background cards/boxes */
+            --box-text: #171411; /* Eerie Black for text inside boxes */
+        }
+        /* 2. Florida Gators Active Theme */
+        [data-theme="gators"] {
+            --bg-primary: #0021A5; /* Albert Blue */
+            --text-primary: #FA4616; /* Orange Accent */
+            --toggle-bg: #FA4616; /* Orange Toggle Track */
+            --toggle-btn: #FFFFFF; /* White Toggle Button */
+            --border-color: #FA4616;
+            --box-bg: #FA4616;
+            --box-text: #FFFFFF;
+        }
+
+        /* 3. Global Styles */
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: Arial, sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            margin: 0;
+            padding: 2rem;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+        }
+
+        /* 4. Toggle Switch Container */
+        .theme-switch-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .theme-switch {
+            display: inline-block;
+            height: 34px;
+            position: relative;
+            width: 60px;
+        }
+
+        .theme-switch input {
+            display: none;
+        }
+
+        /* 5. The Slider Track */
+        .slider {
+            background-color: var(--toggle-bg);
+            bottom: 0;
+            cursor: pointer;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transition: .4s;
+            border-radius: 34px;
+            border: 2px solid var(--border-color);
+        }
+
+        /* 6. The Moving Knob */
+        .slider:before {
+            background-color: var(--toggle-btn);
+            bottom: 4px;
+            content: "";
+            height: 22px;
+            left: 4px;
+            position: absolute;
+            transition: .4s;
+            width: 22px;
+            border-radius: 50%;
+        }
+
+        /* 7. Slider Movement States */
+        input:checked + .slider {
+            background-color: var(--toggle-bg);
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(26px);
+            background-color: var(--toggle-btn);
+        }
+		figcaption {margin: 10px}
+		figure{margin: 10px}
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- The Theme Toggle Switch -->
+        <div class="theme-switch-wrapper">
+            <span>Go Gators?</span>
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider"></div>
+            </label>
+        </div>
+
+        <!-- Sample Page Content -->
+        <h1>Welcome to the Swamp</h1>
+        <p>Flip the switch above to activate Florida Gators mode or stick to standard dark mode.</p>
+    </div>
+
+    <div id="title">
+        <div id="title-box">
+            <h1>A Tad about me&nbsp;</h1>
+        </div>
+    </div>
+
+  <div id="nav">
+	<a href="index.html" style="display: inline-block; font-family: sans-serif; font-size: 16px; color: #000000; text-decoration: none; font-weight: bold; border: 2px solid #000000; padding: 10px 20px; border-radius: 4px; letter-spacing: 1px; margin: 5px;">Home</a> - 
+<a href="Favorites.html" style="display: inline-block; font-family: sans-serif; font-size: 16px; color: #000000; text-decoration: none; font-weight: bold; border: 2px solid #000000; padding: 10px 20px; border-radius: 4px; letter-spacing: 1px; margin: 5px;">Favorites</a> - 
+<a href="contact.html" style="display: inline-block; font-family: sans-serif; font-size: 16px; color: #000000; text-decoration: none; font-weight: bold; border: 2px solid #000000; padding: 10px 20px; border-radius: 4px; letter-spacing: 1px; margin: 5px;">Contact</a>
+</div>
+
+
+    <div id="content">
+        <h1 style="font-size: 3rem;"><strong>About Me</strong>&nbsp;</h1>
+      <p>My passion for creation began behind a camera lens, deeply rooted in a childhood surrounded by photography. Inheriting this eye for capturing moments from my parents, I later expanded my visual storytelling into film production during middle school. Throughout high school, this passion grew into a national platform, allowing me to travel across the United States to teach others about filmmaking and share my experiences. This background has given me a deep love for creating and sharing compelling content, showing me firsthand how moving and still images can connect with an audience.&nbsp;</p>
+      <h1 style="font-size: 55px;">Design Philosophy &amp; Brand Storytelling&nbsp;</h1>
+      <p style="font-size: 36px;">What draws me to graphic and web design is the power of visual branding and advertising. I am fascinated by the idea that a single logo can hold an entire culture or tell a brand's story in a fraction of a second. To me, design is about taking someone's raw idea and giving it life whether that means crafting a distinct visual identity or translating a concept into a beautiful, functional website. I find immense fulfillment in creating specifically for people's needs, transforming abstract thoughts into tangible art that serves a clear purpose.&nbsp;</p>
+      <h1 style="font-size: 55px;"><b>Future Goals &amp; Vision</b> </h1>
+      <h1 style="font-size: 36px;">As I build my digital footprint, my goal is to merge my background in photography and film with my love for graphic and web design to build cohesive, multi-media experiences. I want to partner with businesses and creators to elevate their digital identities through immersive web layouts and memorable visual assets. By combining my natural instinct for storytelling with structured design principles, I aim to create websites and campaigns that do not just look stunning, but genuinely resonate with people and leave a lasting impression. </h1>
+     
+      <div style="clear: both;"></div>
+<figure style="display: flex; align-items: center; gap: 15px;"> 
+  <figcaption style="padding: 5px; text-align: left; width: 60%; font-size: 50px;">Community, competition, and family. This photo with my boys represents my love for sports and the unforgettable atmosphere of growing, playing, and winning alongside brothers from another mother. I always have done some type of sport and enjoy every moment of it.&nbsp;</figcaption> 
+  <img src="images/volleyballtheboys.jpg" alt="A tight-knit men's volleyball team smiling and celebrating together with arms raised on an indoor court." style="width: 40%; height: auto; display: block;"/> 
+</figure>
+</div>
+
+<div style="clear: both;"></div>
+	<h1>Here is a list of some characteristics of me&nbsp;</h1>
+	<ul>
+  <li>
+    <strong>Multidisciplinary Creative:</strong> Proficient in translating abstract concepts into physical and digital realities through expert woodworking, graphic design, and web design.
+  </li>
+  <li>
+    <strong>Strategic Brand Designer:</strong> Fascinated by the intersection of marketing, culture, and typography, focusing on creating memorable logos that tell a deep story.
+  </li>
+  <li>
+    <strong>Pop-Culture Enthusiast:</strong> Deeply passionate about the complex world of Pokémon, studying its iconic brand design, massive global community, and evolving franchise culture.
+  </li>
+  <li>
+    <strong>Team-Oriented Collaborator:</strong> Highly effective at fostering communication, high-energy teamwork, and meaningful community bonds in both creative and athletic settings.
+  </li>
+</ul>
+		
+	<div style="clear: both;"></div>
+<div style="max-width: 100%; margin: 40px auto; font-family: sans-serif;">
+     <iframe 
+    src="https://youtube.com" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    allowfullscreen
+    style="display: block; width: 100%; max-width: 900px; aspect-ratio: 16 / 9; margin: 40px auto; border: 0; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);"
+  ></iframe>
+
+    <div></div>
+	<h1 style="font-family: Consolas, 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', Monaco, 'Courier New', monospace; font-size: 36px;"> I selected this video because it perfectly represents the new style of filmmaking that is shaping modern creative culture. To me, this video is a masterclass in organic brand storytelling it captures the exact essence of iconic brands like Supreme, where the focus isn't on a forced sales pitch, but on people simply having fun, being authentic, and being super expressive. As an aspiring web and graphic designer, I am deeply inspired by how this cinematic style builds a lifestyle and a subculture around a brand, proving that the best advertisements are the ones that feel completely real.
+</h1>
+<div style="text-align: center; margin: 30px 0; perspective: 1000px;">
+  <a href="https://supreme.com" target="_blank" class="supreme-3d-btn">
+    Visit Supreme
+  </a>
+</div>
+
+<style>
+  .supreme-3d-btn {
+    display: inline-block;
+    font-family: sans-serif;
+    font-size: 20px;
+    color: #ffffff; /* White text looks sharp against a solid red block */
+    background-color: #ff0000; /* Supreme red background */
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 4px;
+    
+    /* 3D Depth Properties */
+    border: 2px solid #b30000; /* Darker red border for definition */
+    border-bottom: 7px solid #800000; /* Extra thick deep-red base for 3D extrusion */
+    transform-style: preserve-3d;
+    
+    /* Smooth Transition Setup */
+    transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-bottom 0.2s, background-color 0.2s;
+  }
+
+  /* Spin animation and click/hover feedback */
+  .supreme-3d-btn:hover {
+    animation: supremeSpin 0.8s ease-in-out forwards;
+    background-color: #e60000; /* Slight color shift on hover */
+  }
+
+  .supreme-3d-btn:active {
+    border-bottom: 2px solid #800000; /* Flattens the button when clicked */
+    transform: translateY(5px); /* Pushes the button down visually */
+  }
+
+  /* The 3D Spinning Animation */
+  @keyframes supremeSpin {
+    0% {
+      transform: rotateY(0deg);
+    }
+    100% {
+      transform: rotateY(360deg);
+    }
+  }
+</style>
+
+<div style="clear: both;"></div>
+    <div id="footer">
+      <p>&nbsp;</p>
+      <p> Copyright &copy; 2026 Greysens Grub </p>
+    </div>
+
+
+    <!-- JavaScript to handle the toggle state -->
+    <script>
+        const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+        toggleSwitch.addEventListener('change', (e) => {
+            if (e.target.checked) {
+                document.documentElement.setAttribute('data-theme', 'gators');
+            } else {
+                document.documentElement.removeAttribute('data-theme');
+            }
+        });
+    </script>
+</body>
+</html>
